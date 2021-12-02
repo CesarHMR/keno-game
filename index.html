@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keno</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main-window.css">
+    <link rel="stylesheet" href="./css/screen.css">
+    <link rel="stylesheet" href="./css/paytable.css">
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+    <div id="main">
+
+        <div id="button-area" class="area">
+            <img src="./images/Logo.png" class="logo">
+
+            <div id="button-bar">
+                <div class="button" id="play-button"></div>
+                <div class="button" id="bet-element">
+                    <div id="plus-button"></div>
+                    <div id="bet-text"></div>
+                    <div id="minus-button"></div>
+                </div>
+                <div class="button" id="balance-text"></div>
+                <div class="button" id="random-button"></div>
+                <div class="button" id="clear-button"></div>
+                <div class="button" id="help-button"></div>
+                <div class="button" id="history-button"></div>
+                <div class="button" id="home-button"></div>
+                <div class="button" id="volume-button"></div>
+            </div>
+        </div>
+
+        <div id="game-area" class="area">
+            <div id="grid"></div>
+            <div class="grid-line" id="horizontal-grid-line">
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <div class="grid-line" id="vertical-grid-line">
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+                <hr>
+            </div>
+        </div>
+        
+        <div id="paytable-area" class="area">
+            <div class="paytable">
+                <div class="paytable-match">10</div>
+                <div class="paytable-prize">$10.000,00</div>
+            </div>
+            <div class="paytable">
+                <div class="paytable-match">9</div>
+                <div class="paytable-prize">$500,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">8</div>
+                <div class="paytable-prize">$250,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">7</div>
+                <div class="paytable-prize">$50,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">6</div>
+                <div class="paytable-prize">$20,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">5</div>
+                <div class="paytable-prize">$15,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">4</div>
+                <div class="paytable-prize">$5,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">3</div>
+                <div class="paytable-prize">$1,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">2</div>
+                <div class="paytable-prize">$1,00</div>
+            </div>
+
+            <div class="paytable">
+                <div class="paytable-match">1</div>
+                <div class="paytable-prize">$1,00</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./javascript/fontsize.js"></script>
+    <script>
+        SetGlobalUnity("main")
+    </script>
+    <script src="./javascript/grid.js"></script>
+</body>
+</html>

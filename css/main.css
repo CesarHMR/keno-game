@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+/*
+Roboto
+Carrois Gothic
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Carrois Gothic', sans-serif;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+:root{
+    --green: #00CC79;
+    --greenDark: #00AF64;
+    --greenDarker: #004D26;
+    --white: white;
+
+    font-size: calc(1 * var(--res));
+    color: white;
+    overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: calc(1 * var(--res));
+}
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: rgb(77, 77, 77);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 00px;
+    background: rgb(165, 165, 165);
+}
+/* Handle on hover */
+/*::-webkit-scrollbar-thumb:hover {
+    background: red;
+}*/
