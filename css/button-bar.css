@@ -1,0 +1,77 @@
+#button-area{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+#button-bar{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    "ran clear"
+    "bal bal"
+    "bet bet"
+    "play play"
+    "opt opt";
+    grid-gap: calc(1 * var(--u));
+}
+
+.logo{
+    width: 100%;
+}
+
+.button{
+    background-color: var(--greenDark);
+    border-radius: calc(10 * var(--u));
+}
+.button:hover{
+    background-color: var(--greenHover);
+}
+.button:active{
+    background-color: var(--greenDarker);
+}
+
+#play-button{
+    grid-area: play;
+}
+#bet-element{
+    grid-area: bet;
+}
+#balance-text{
+    grid-area: bal;
+
+    font-size: calc(2 * var(--u));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#random-button{
+    grid-area: ran;
+}
+#clear-button{
+    grid-area: clear;
+}
+#options-buttons{
+    padding-inline: calc(1 * var(--u));
+    grid-area: opt;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: calc(3 * var(--u));
+    align-items: center;
+    justify-content: space-between;
+}
+.opt{
+    height: 100%;
+}
+#help-button{
+}
+#history-button{
+}
+#home-button{
+}
+#volume-button{
+}

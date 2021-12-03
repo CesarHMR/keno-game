@@ -23,6 +23,7 @@ Carrois Gothic
     --green: #00CC79;
     --greenDark: #00AF64;
     --greenDarker: #004D26;
+    --greenHover: #019249;
     --white: white;
 
     font-size: calc(1 * var(--res));

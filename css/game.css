@@ -12,27 +12,31 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    grid-gap: calc(.5 * var(--u));
 }
 
 #grid div{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     font-size: calc(1.8 * var(--u));
     font-weight: 600;
+    
     color: var(--greenDarker);
 }
 
 .grid-line{
     position: absolute;
-    width: calc(34 * var(--u));
-    height: calc(30 * var(--u));
+    height: calc(27.5 * var(--u));
+    width: calc(32 * var(--u));
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
+    display: none;
 }
 .grid-line hr{
     width: 100%;
@@ -40,7 +44,21 @@
 }
 #vertical-grid-line{
     transform: rotateZ(90deg);
-    width: calc(35 * var(--u));
-    height: calc(29 * var(--u));
+    width: calc(32 * var(--u));
+    height: calc(26 * var(--u));
 
+}
+
+.grid-number{
+    border-radius: 10px;
+}
+#grid div.number-selected{
+    background-color: var(--greenDark);
+}
+#grid div.number-hit{
+    color: white;
+}
+#grid div.number-selected.number-hit{
+    background-color: var(--white);
+    color: var(--greenDarker);
 }

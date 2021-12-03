@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/screen.css">
     <link rel="stylesheet" href="./css/paytable.css">
     <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/button-bar.css">
 </head>
 <body>
     <div id="main">
@@ -25,13 +26,16 @@
                     <div id="bet-text"></div>
                     <div id="minus-button"></div>
                 </div>
-                <div class="button" id="balance-text"></div>
+                <div class="button" id="balance-text">$100.000,00</div>
                 <div class="button" id="random-button"></div>
                 <div class="button" id="clear-button"></div>
-                <div class="button" id="help-button"></div>
-                <div class="button" id="history-button"></div>
-                <div class="button" id="home-button"></div>
-                <div class="button" id="volume-button"></div>
+
+                <div id="options-buttons">
+                    <div class="button opt" id="help-button"></div>
+                    <div class="button opt" id="history-button"></div>
+                    <div class="button opt" id="home-button"></div>
+                    <div class="button opt" id="volume-button"></div>
+                </div>
             </div>
         </div>
 
@@ -120,6 +124,9 @@
     <script>
         SetGlobalUnity("main")
     </script>
+    <script src="./javascript/game.js"></script>
     <script src="./javascript/grid.js"></script>
+    <script src="./javascript/paytable.js"></script>
+    <script src="./javascript/buttons.js"></script>
 </body>
 </html>
