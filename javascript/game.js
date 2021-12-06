@@ -1,5 +1,16 @@
-let selectedNumbers
+let selectedNumbers = []
 let drawnNumbers = []
+
+function Play(){
+    if(selectedNumbers.length == 0){
+        selectedNumbers = GetRandomNumbersFromPool(10)
+    }
+
+    drawnNumbers = GetRandomNumbersFromPool(10)
+    MarkCard()
+    MarkPaytable()
+    console.log(betAmount)
+}
 
 function GetRandomNumbersFromPool(amount){
     let selected = []
@@ -26,15 +37,6 @@ function GetNumberPool(){
 
 function GetRandomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-function PlayButton(){
-    if(selectedNumbers == undefined)
-        selectedNumbers = GetRandomNumbersFromPool(10)
-
-    drawnNumbers = GetRandomNumbersFromPool(10)
-    MarkCard()
-    MarkPaytable()
 }
 
 function MarkCard(){

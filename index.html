@@ -12,29 +12,48 @@
     <link rel="stylesheet" href="./css/paytable.css">
     <link rel="stylesheet" href="./css/game.css">
     <link rel="stylesheet" href="./css/button-bar.css">
+    <link rel="stylesheet" href="./css/buy.css">
 </head>
 <body>
+    <div class="hide" id="fade-popup">
+        <div id="buy-popup">
+
+            <div id="buy-header">BUY CARDS</div>
+            <div id="buy-buttons">
+                <div class="buy-button button">1 card - R$ 1,00</div>
+                <div class="buy-button button">5 cards - R$ 5,00</div>
+                <div class="buy-button button special-price">20 cards - R$ 19,00</div>
+                <div class="buy-button button special-price">50 cards - R$ 45,00</div>
+            </div>
+
+        </div>
+    </div>
+
     <div id="main">
+
 
         <div id="button-area" class="area">
             <img src="./images/Logo.png" class="logo">
 
             <div id="button-bar">
-                <div class="button" id="play-button"></div>
-                <div class="button" id="bet-element">
-                    <div id="plus-button"></div>
-                    <div id="bet-text"></div>
-                    <div id="minus-button"></div>
+                <div class="button" id="play-button">
+                    PLAY
+                    <div id="cards-amount"></div>
                 </div>
-                <div class="button" id="balance-text">$100.000,00</div>
-                <div class="button" id="random-button"></div>
-                <div class="button" id="clear-button"></div>
+                <div id="bet-element">
+                    <div class="button" id="minus-button">-</div>
+                    <div id="bet-text">R$ 1,00</div>
+                    <div class="button" id="plus-button">+</div>
+                </div>
+                <div class="button" id="balance-text">R$ 100.000,00</div>
+                <div class="button" id="random-button">RANDOM</div>
+                <div class="button" id="clear-button">CLEAR</div>
 
                 <div id="options-buttons">
-                    <div class="button opt" id="help-button"></div>
-                    <div class="button opt" id="history-button"></div>
-                    <div class="button opt" id="home-button"></div>
-                    <div class="button opt" id="volume-button"></div>
+                    <div class="button options-button" id="help-button"></div>
+                    <div class="button options-button" id="history-button"></div>
+                    <div class="button options-button" id="home-button"></div>
+                    <div class="button options-button" id="volume-button"></div>
                 </div>
             </div>
         </div>
@@ -68,51 +87,51 @@
         <div id="paytable-area" class="area">
             <div class="paytable">
                 <div class="paytable-match">10</div>
-                <div class="paytable-prize">$10.000,00</div>
+                <div class="paytable-prize">R$ 10.000,00</div>
             </div>
             <div class="paytable">
                 <div class="paytable-match">9</div>
-                <div class="paytable-prize">$500,00</div>
+                <div class="paytable-prize">R$ 500,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">8</div>
-                <div class="paytable-prize">$250,00</div>
+                <div class="paytable-prize">R$ 250,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">7</div>
-                <div class="paytable-prize">$50,00</div>
+                <div class="paytable-prize">R$ 50,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">6</div>
-                <div class="paytable-prize">$20,00</div>
+                <div class="paytable-prize">R$ 20,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">5</div>
-                <div class="paytable-prize">$15,00</div>
+                <div class="paytable-prize">R$ 15,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">4</div>
-                <div class="paytable-prize">$5,00</div>
+                <div class="paytable-prize">R$ 5,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">3</div>
-                <div class="paytable-prize">$1,00</div>
+                <div class="paytable-prize">R$ 1,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">2</div>
-                <div class="paytable-prize">$1,00</div>
+                <div class="paytable-prize">R$ 1,00</div>
             </div>
 
             <div class="paytable">
                 <div class="paytable-match">1</div>
-                <div class="paytable-prize">$1,00</div>
+                <div class="paytable-prize">R$ 1,00</div>
             </div>
 
         </div>
@@ -124,9 +143,14 @@
     <script>
         SetGlobalUnity("main")
     </script>
+    <script src="./javascript/math.js"></script>
     <script src="./javascript/game.js"></script>
     <script src="./javascript/grid.js"></script>
     <script src="./javascript/paytable.js"></script>
     <script src="./javascript/buttons.js"></script>
+    <script src="./javascript/bet.js"></script>
+    <script src="./javascript/balance.js"></script>
+    <script src="./javascript/buy.js"></script>
+    <script src="./javascript/autoplay.js"></script>
 </body>
 </html>
