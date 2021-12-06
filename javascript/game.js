@@ -8,8 +8,6 @@ function Play(){
 
     drawnNumbers = GetRandomNumbersFromPool(10)
     MarkCard()
-    MarkPaytable()
-    console.log(betAmount)
 }
 
 function GetRandomNumbersFromPool(amount){
@@ -39,7 +37,15 @@ function GetRandomIntFromInterval(min, max) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+function GetWinNumbers(numbers){
+    let win = selectedNumbers.filter(x => numbers.includes(x))
+    return win
+}
+
 function MarkCard(){
+    let showNumbers = []
+    let aaa = []
+
     let index = 0
     numbersGrid.forEach(element => {
         element.classList.remove('number-selected')
@@ -50,13 +56,21 @@ function MarkCard(){
         }
     
         if(drawnNumbers.filter(x => x == index).length > 0){
-            element.classList.add('number-hit')
+            showNumbers.push(element)
         }
         index++
     });
-}
 
-function GetWinNumbers(){
-    let win = selectedNumbers.filter(x => drawnNumbers.includes(x))
-    return win
+    for (let i = 0; i < showNumbers.length; i++) {
+
+        timeOutFunc = setTimeout(function () {
+    
+            showNumbers[i].classList.add('number-hit')
+            aaa.push(parseInt(showNumbers[i].textContent))
+            console.log(aaa)
+            MarkPaytable(aaa)
+    
+        }, (i + 1) * 200)
+        
+    }
 }

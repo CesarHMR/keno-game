@@ -1,4 +1,4 @@
-let playTime = 2000;
+let playTime = 3000;
 let isPlaying = false
 let timeOutFunc
 

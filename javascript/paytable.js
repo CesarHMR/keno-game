@@ -1,6 +1,6 @@
 let paytableElements = []
 let paytableTextValue = []
-const paytableMultiplier = [1, 1, 1, 5, 15, 20, 50, 250, 500, 10000]
+const paytableMultiplier = [0.1, 0.5, 6, 17, 25, 35, 50, 250, 500, 10000]
 
 let p = document.querySelectorAll('.paytable')
 let pt = document.querySelectorAll('.paytable .paytable-prize')
@@ -12,8 +12,9 @@ for (let index = 0; index < 10; index++) {
 paytableElements.reverse()
 paytableTextValue.reverse()
 
-function MarkPaytable(){
-    let win = GetWinNumbers().length
+function MarkPaytable(showNumbers){
+    let win = GetWinNumbers(showNumbers).length
+    //console.log(win)
 
     for (let index = 0; index < paytableElements.length; index++) {
         
@@ -36,3 +37,5 @@ function UpdatePaytableValue(){
 
     }
 }
+
+UpdatePaytableValue()
