@@ -15,7 +15,6 @@ paytableTextValue.reverse()
 function MarkPaytable(){
     let win = GetWinNumbers().length
 
-    
     for (let index = 0; index < paytableElements.length; index++) {
         
         paytableElements[index].classList.remove('win')

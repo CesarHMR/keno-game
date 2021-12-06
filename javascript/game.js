@@ -2,7 +2,7 @@ let selectedNumbers = []
 let drawnNumbers = []
 
 function Play(){
-    if(selectedNumbers.length == 0){
+    if(selectedNumbers.length < 10){
         selectedNumbers = GetRandomNumbersFromPool(10)
     }
 
