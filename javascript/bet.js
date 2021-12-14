@@ -4,6 +4,9 @@ const plusButton = document.querySelector('#plus-button')
 const minusButton = document.querySelector('#minus-button')
 
 function ChangeBetByAmount(amount){
+    if(isPlaying)
+    return
+    
     betAmount += amount
     betAmount = clamp(betAmount, 1, 50)
     UpdateBetText()

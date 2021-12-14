@@ -1,6 +1,7 @@
 const playButton = document.querySelector('#play-button')
 const randomButton = document.querySelector('#random-button')
 const clearButton = document.querySelector('#clear-button')
+const playIcon = document.querySelector('#play-button img')
 
 playButton.addEventListener('click', function(){
 
@@ -10,9 +11,14 @@ playButton.addEventListener('click', function(){
     else{
         PlayButton()
     }
+
+    playIcon.src = isPlaying ? './images/stop_icon.png' : './images/play_icon.png'
 })
 
 randomButton.addEventListener('click', function(){
+    if(isPlaying)
+    return
+
     selectedNumbers = GetRandomNumbersFromPool(10)
     drawnNumbers = []
     MarkCard()
@@ -20,6 +26,9 @@ randomButton.addEventListener('click', function(){
 })
 
 clearButton.addEventListener('click', function(){
+    if(isPlaying)
+    return
+
     selectedNumbers = []
     drawnNumbers = []
     MarkCard()

@@ -3,10 +3,9 @@
     align-items: center;
     justify-content: center;
 }
-
 #grid{
     height: 100%;
-    width: 80%;
+    width: 90%;
     position: relative;
 
     display: grid;
@@ -14,7 +13,6 @@
     grid-template-rows: repeat(10, 1fr);
     grid-gap: calc(.5 * var(--u));
 }
-
 #grid div{
     display: flex;
     align-items: center;
@@ -25,7 +23,6 @@
     
     color: var(--greenDarker);
 }
-
 .grid-line{
     position: absolute;
     height: calc(27.5 * var(--u));
@@ -48,9 +45,9 @@
     height: calc(26 * var(--u));
 
 }
-
 .grid-number{
     border-radius: 10px;
+    transition: all 200ms;
 }
 #grid div.number-selected{
     background-color: var(--greenDark);

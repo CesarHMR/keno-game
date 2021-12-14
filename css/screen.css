@@ -9,6 +9,7 @@ body{
 
     padding: calc(10 * var(--u)) calc(7 * var(--u)) calc(10 * var(--u)) calc(7 * var(--u));
     background-color: var(--green);
+    background-image: linear-gradient(#00d47f,#02c479);
     /*background-image: linear-gradient(90deg,var(--greenDark), var(--green), var(--green), var(--greenDark));*/
 
     display: grid;
@@ -18,4 +19,7 @@ body{
     margin-inline: auto;
     overflow: hidden;
     position: relative;
+}
+.area{
+    padding: calc(1 * var(--u));
 }

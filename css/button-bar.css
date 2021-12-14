@@ -2,14 +2,13 @@
     display: grid;
     grid-template-rows: 1fr 2fr;
 }
-
 #button-bar{
     height: 100%;
     width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 3fr 1fr;
     grid-template-areas: 
     "ran clear"
     "bal bal"
@@ -18,14 +17,14 @@
     "opt opt";
     grid-gap: calc(1 * var(--u));
 }
-
 .logo{
     width: 100%;
 }
-
+.rounded{
+}
 .button{
     background-color: var(--greenDark);
-    border-radius: calc(1 * var(--u));
+    border-radius: calc(100 * var(--u));
 
     display: flex;
     align-items: center;
@@ -45,6 +44,7 @@
     grid-area: bal;
 
     font-size: calc(2 * var(--u));
+    font-weight: 600;
 
     display: flex;
     align-items: center;
@@ -68,18 +68,18 @@
 .options-button{
     height: 100%;
 }
-
-
 #bet-element{
     grid-area: bet;
 
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-gap: calc(0 * var(--u));
+
+    font-weight: 600;
+    font-size: calc(2 * var(--u));
 }
 #bet-text{
-    background-color: var(--greenDark);
-    border-radius: calc(2 * var(--u));
+    background-color: var(--greenDark);  
 
     display: flex;
     align-items: center;
@@ -89,19 +89,26 @@
     border-radius: 0;
 }
 #bet-element #plus-button{
-    border-radius: 0 calc(1 * var(--u)) calc(1 * var(--u)) 0;
+    border-radius: 0 calc(100 * var(--u)) calc(100 * var(--u)) 0;
 }
 #bet-element #minus-button{
-    border-radius: calc(1 * var(--u)) 0 0 calc(1 * var(--u));
+    border-radius: calc(100 * var(--u)) 0 0 calc(100 * var(--u));
 }
 #play-button{
     position: relative;
 }
 #cards-amount{
     position: absolute;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 100%;
     width: 20%;
+
+    color: var(--greenDark);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(1.5 * var(--u));
+
 
     display: flex;
     align-items: center;
@@ -112,4 +119,16 @@
 .button.special-price{
     background-color: rgb(255, 217, 0);
     color: black;
+}
+#play-button img{
+    width: 200px;
+}
+#random-button img{
+    width: 70px;
+}
+#clear-button img{
+    width: 70px;
+}
+#balance-text{
+    font-size: calc(2 * var(--u));
 }

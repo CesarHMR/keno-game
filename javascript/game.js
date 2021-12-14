@@ -20,7 +20,7 @@ function GetRandomNumbersFromPool(amount){
         selected[index] = rand
     }
 
-    return selected
+    return selected.sort()
 }
 
 function GetNumberPool(){
