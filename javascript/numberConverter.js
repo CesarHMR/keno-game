@@ -8,13 +8,13 @@ function GetConvertedNumber(number){
         return Convert(number, trillion, 'T')
     }
     else if(number > billion){
-        return Convert(number, trillion, 'T')
+        return Convert(number, billion, 'B')
     }
     else if(number > million){
-        return Convert(number, trillion, 'T')
+        return Convert(number, million, 'M')
     }
     else if(number > thousand){
-        return Convert(number, trillion, 'T')
+        return Convert(number, thousand, 'K')
     }
     else{
         return Convert(number, 1, '')
